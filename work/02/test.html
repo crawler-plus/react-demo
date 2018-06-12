@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <div id="test1"></div>
+    <div id="test2"></div>
+
+<script src="../js/react.development.js"></script>
+<script src="../js/react-dom.development.js"></script>
+<script src="../js/babel.min.js"></script>
+<script>/*告诉babel.js解析里面的jsx代码*/
+    const msg = 'I like you'
+    const myId = 'it4u'
+    // 创建虚拟dom元素对象
+    const vDom1 = React.createElement('h2', {id: myId.toLowerCase()}, msg.toUpperCase())
+    // 将虚拟dom渲染到页面真实dom容器中
+    ReactDOM.render(vDom1, document.getElementById('test1'))
+</script>
+
+    <script type="text/babel">
+        const vDom2 = <h3 id={myId.toUpperCase()}>{msg.toLowerCase()}</h3>
+        ReactDOM.render(vDom2, document.getElementById('test2'))
+    </script>
+</body>
+</html>

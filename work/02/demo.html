@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <div id="example1"></div>
+
+<script src="../js/react.development.js"></script>
+<script src="../js/react-dom.development.js"></script>
+<script src="../js/babel.min.js"></script>
+
+<script type="text/babel">
+    const names = ['jQuery', 'angular', 'vue', 'zepto', 'react']
+    const ul = (<ul>
+                    {names.map((val, index) => <li key={index}>{val}</li>)}
+                </ul>)
+    ReactDOM.render(ul, document.getElementById('example1'))
+</script>
+</body>
+</html>
